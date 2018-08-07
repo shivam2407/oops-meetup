@@ -1,49 +1,200 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+	    crossorigin="anonymous">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				OOPS Design Pattern.
+				<br>
+				<img src="/img/object.png" />
+			</section>
+			<section>
+				Lets Start coding.
+				<br>
+				<img src="https://media.giphy.com/media/zNSX3G2LztEyY/giphy.gif" alt="start coding" />
+			</section>
+			<section>
+				<section>
+					Create a Task Object with following field using <a target="_blank" href="https://media.giphy.com/media/i3LMArNuYxnEY/giphy.gif"> Constructor pattern</a>
+					<br>
+					<br>
+					<br>
+					<br>
+					<i class="fas fa-arrow-down"></i>
+				</section>
+				<section id="task">
+					<ul>
+						<li>
+							Name:
+							<span style="font-size: 24px;">Name of the task</span>
+						</li>
+						<li>
+							Priority:
+							<span style="font-size: 24px;">Priority of task</span>
+						</li>
+						<li>
+							Completed:
+							<span style="font-size: 24px;">Status of the task.</span>
+						</li>
+						<li>
+							Complete:
+							<span style="font-size: 24px;">Function which changes completed status of task.</span>
+						</li>
+						<li>
+							Save:
+							<span style="font-size: 24px;">Function which saves this task to database(or just print to stdout).</span>
+						</li>
+					</ul>
+				</section>
+				<section>
+					Create a User Object with following field using Constructor pattern
+					<br>
+					<br>
+					<br>
+					<br>
+					<i class="fas fa-arrow-down"></i>
+				</section>
+				<section id="user">
+					<ul>
+						<li>
+							FirstName:
+							<span style="font-size: 24px;">Name of the task</span>
+						</li>
+						<li>
+							LastName:
+							<span style="font-size: 24px;">Priority of task</span>
+						</li>
+					</ul>
+				</section>
+				<section id="modulePattern">
+					<img src="https://media.giphy.com/media/3oz8xKQ7rgHu3dIdUI/giphy.gif" />
+					<br>
+					<br>Great Work!
+					<i class="fas fa-arrow-right"></i>
+				</section>
+					
+			</section>
+			<!--Singleton classes-->
+			<section>
+				<section>
+					Create an TaskRepo Object which has following function.Follow
+					<a target="_blank" href="https://media.giphy.com/media/3oKIPmM4hkQIf4p5T2/giphy.gif">Singleton pattern</a>
+					to create the Object.
+					<br>
+					<br>
+					<br>
+					<br>
+					<i class="fas fa-arrow-down"></i>
+				</section>
+				<section>
+					<ul>
+						<li>
+							getCount:
+							<span style="font-size: 24px;">Function which returns total number of tasks in database</span>
+						</li>
+						<li>
+							addTask:
+							<span style="font-size: 24px;">Function which adds task to database(or local variable)</span>
+						</li>
+					</ul>
+				</section>
+				<section>
+					Create an UserRepo Object which has following function. Follow
+					<a target="_blank" href="https://media.giphy.com/media/3oKIPmM4hkQIf4p5T2/giphy.gif">Singleton pattern</a>
+					to create the Object.
+					<br>
+					<br>
+					<br>
+					<br>
+					<i class="fas fa-arrow-down"></i>
+				</section>
+				<section>
+					<ul>
+						<li>
+							getCount:
+							<span style="font-size: 24px;">Function which returns total number of users in database</span>
+						</li>
+						<li>
+							addUser:
+							<span style="font-size: 24px;">Function which adds users to database(or local variable)</span>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<!--Factory Methods-->
+			<section>
+				<section>
+					Create a FactoryRepo Object with following field using <a target="_blank" href="http://lmgtfy.com/?q=factory+pattern"> Factory pattern.</a>
+					<br><br><br><br>
+					<i class="fas fa-arrow-down"></i>
+				</section>
+				<section>
+					<ul>
+						<li>
+							GetRepo:
+							<span style="font-size: 24px;">
+								Function which takes input a name of repo and returns that repo.
+							</span>
+						</li>
+					</ul>
+				</section>
+			</section>
 		</div>
+	</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [{
+					src: 'plugin/markdown/marked.js'
+				},
+				{
+					src: 'plugin/markdown/markdown.js'
+				},
+				{
+					src: 'plugin/notes/notes.js',
+					async: true
+				},
+				{
+					src: 'plugin/highlight/highlight.js',
+					async: true,
+					callback: function () {
+						hljs.initHighlightingOnLoad();
+					}
+				}
+			]
+		});
+	</script>
+</body>
+
 </html>
